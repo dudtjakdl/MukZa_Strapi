@@ -1,8 +1,16 @@
-'use strict';
+const { sanitizeEntity } = require("strapi-utils");
 
-/**
- * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#core-controllers)
- * to customize this controller
- */
+module.exports = {
+  /**
+   * Delete a record.
+   *
+   * @return {Object}
+   */
 
-module.exports = {};
+  async delete(ctx) {
+    const { name } = ctx.params;
+
+    const entity = await strapi.services.category.delete({ name });
+    return sanitizeEntity(entity, { model: strapi.models.category });
+  },
+};

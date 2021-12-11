@@ -42,7 +42,7 @@
     },
     {
       "method": "DELETE",
-      "path": "/categories/:id",
+      "path": "/categories/:name",
       "handler": "category.delete",
       "config": {
         "policies": []
