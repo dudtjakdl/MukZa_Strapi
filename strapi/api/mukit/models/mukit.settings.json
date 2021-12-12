@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mukits",
+  "info": {
+    "name": "mukit",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "comment": {
+      "type": "text"
+    },
+    "visiting": {
+      "type": "boolean"
+    },
+    "restaurant": {
+      "type": "json"
+    },
+    "category_relation": {
+      "model": "category",
+      "via": "mukits"
+    }
+  }
+}

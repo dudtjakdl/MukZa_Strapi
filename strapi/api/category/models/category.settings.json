@@ -18,6 +18,10 @@
       "plugin": "users-permissions",
       "model": "user",
       "via": "categories"
+    },
+    "mukits": {
+      "via": "category_relation",
+      "collection": "mukit"
     }
   }
 }
